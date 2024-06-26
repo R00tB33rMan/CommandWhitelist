@@ -11,7 +11,7 @@ import org.bukkit.event.server.TabCompleteEvent;
 
 public class TabCompleteBlockerListener implements Listener {
 
-    @EventHandler(priority = EventPriority.NORMAL)
+    @EventHandler(priority = EventPriority.LOWEST)
     public void onCommandTabComplete(TabCompleteEvent event) {
         if (!(event.getSender() instanceof Player)) return;
         Player player = (Player) event.getSender();
